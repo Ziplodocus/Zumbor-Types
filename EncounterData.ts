@@ -1,4 +1,5 @@
 import { EncounterOption } from "./EncounterOption.js";
+import { ColorResolvable } from "discord.js";
 
 export type EncounterData = {
   title: string;

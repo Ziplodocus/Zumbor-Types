@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Ziplodocus/Zumbor-Types/issues"
   },
-  "homepage": "https://github.com/Ziplodocus/Zumbor-Types#readme"
+  "homepage": "https://github.com/Ziplodocus/Zumbor-Types#readme",
+  "devDependencies": {
+    "discord.js": "^14.6.0"
+  }
 }

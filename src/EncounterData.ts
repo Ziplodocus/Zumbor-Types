@@ -42,11 +42,10 @@ export function validate(data: Record<string, unknown>): EncounterData | Error {
         if (!Object.values(EncounterResult).includes(type)) return new Error(type + ' is not a valid EncounterResult');
         if (!Object.values(PlayerEffect).includes(effect)) return new Error(effect + ' is not a valid PlayerEffect');
         if (typeof value !== 'number') return new Error(value + ' is not a number');
-        return new Error();
       };
     }
-
     return eData;
+
   } catch (e) {
     if (e instanceof Error) return e;
     else if (typeof e === 'string') return new Error(e);

@@ -13,8 +13,8 @@ export type EncounterData = {
 
 export function validate(data: Record<string, unknown>): EncounterData | Error {
   /*
-    Assume data is correctly typed then try and desturcture
-  */
+      Assume data is correctly typed then try and desturcture
+    */
   const eData = data as EncounterData;
   try {
     /*
@@ -32,8 +32,8 @@ export function validate(data: Record<string, unknown>): EncounterData | Error {
     if (Object.keys(options).length <= 0) return new Error('Please add at least one option!');
     if (Object.keys(options).length > 4) return new Error('That\'s too many options!');
     for (const option in options) {
-      const { threshold, stat, success, fail } = options[option];
-      if (typeof threshold !== 'number') return new Error(threshold + ' is not a string');
+      const { threshold, stat, "Success": success, "Fail": fail } = options[option];
+      if (typeof threshold !== 'number') return new Error(threshold + ' is not a number');
       if (!Object.values(Attribute).includes(stat)) return new Error(stat + ' is not a valid Attribute');
 
       for (const result of [success, fail]) {

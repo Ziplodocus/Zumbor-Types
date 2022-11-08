@@ -1,8 +1,8 @@
 import { PlayerEffect } from "./PlayerEffect";
 
 export enum EncounterResult {
-  SUCCESS = "success",
-  FAIL = "fail",
+  SUCCESS = "Success",
+  FAIL = "Fail",
 }
 
 export type EncounterOptionResult = {

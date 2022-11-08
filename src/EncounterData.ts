@@ -29,6 +29,8 @@ export function validate(data: Record<string, unknown>): EncounterData | Error {
     for (let prop in [title, text]) {
       if (typeof prop !== 'string') return new Error(prop + ' is not a string');
     }
+    if (Object.keys(options).length <= 0) return new Error('Please add at least one option!');
+    if (Object.keys(options).length > 4) return new Error('That\'s too many options!');
     for (const option in options) {
       const { threshold, stat, success, fail } = options[option];
       if (typeof threshold !== 'number') return new Error(threshold + ' is not a string');

@@ -8,3 +8,4 @@ export declare type EncounterData = {
         [label: string]: EncounterOption;
     };
 };
+export declare function validate(data: Record<string, unknown>): EncounterData | Error;

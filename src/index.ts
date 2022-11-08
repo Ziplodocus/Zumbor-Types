@@ -1,4 +1,4 @@
-export { EncounterData } from "./EncounterData.js";
+export { EncounterData, validate as validateEncounterData } from "./EncounterData.js";
 export { EncounterOption } from "./EncounterOption.js";
 export { EncounterOptionResult, EncounterResult } from "./EncounterResult.js";
 export { PlayerData } from "./PlayerData.js";

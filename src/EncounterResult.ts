@@ -10,5 +10,5 @@ export type EncounterOptionResult = {
   title: string;
   text: string;
   effect: PlayerEffect;
-  value: any;
+  potency: number;
 };

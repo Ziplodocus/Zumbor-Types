@@ -37,13 +37,13 @@ export function validate(data: Record<string, unknown>): EncounterData | Error {
       if (!Object.values(Attribute).includes(stat)) return new Error(stat + ' is not a valid Attribute');
 
       for (const result of [success, fail]) {
-        const { type, title, text, effect, value } = result;
+        const { type, title, text, effect, potency } = result;
         for (let prop in [title, text]) {
           if (typeof prop !== 'string') return new Error(prop + ' is not a string');
         }
         if (!Object.values(EncounterResult).includes(type)) return new Error(type + ' is not a valid EncounterResult');
         if (!Object.values(PlayerEffect).includes(effect)) return new Error(effect + ' is not a valid PlayerEffect');
-        if (typeof value !== 'number') return new Error(value + ' is not a number');
+        if (typeof potency !== 'number') return new Error(potency + ' is not a number');
       };
     }
     return eData;

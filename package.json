@@ -1,6 +1,6 @@
 {
   "name": "@ziplodocus/zumbor-types",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Types used in Zumbor",
   "main": "src/index.ts",
   "scripts": {

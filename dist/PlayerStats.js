@@ -1,7 +1,7 @@
 export var Attribute;
 (function (Attribute) {
-    Attribute["Strength"] = "strength";
-    Attribute["Wisdom"] = "wisdom";
-    Attribute["Agility"] = "agility";
-    Attribute["Charisma"] = "charisma";
+    Attribute["STRENGTH"] = "Strength";
+    Attribute["WISDOM"] = "Wisdom";
+    Attribute["AGILITY"] = "Agility";
+    Attribute["CHARISMA"] = "Charisma";
 })(Attribute || (Attribute = {}));

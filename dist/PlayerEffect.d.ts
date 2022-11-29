@@ -1,6 +1,6 @@
 export declare enum PlayerEffect {
-    DAMAGE = "damage",
-    HEAL = "heal",
-    NONE = "no effect",
-    CHARISMA = "charisma"
+    DAMAGE = "Damage",
+    HEAL = "Heal",
+    NONE = "No effect",
+    CHARISMA = "Charisma"
 }

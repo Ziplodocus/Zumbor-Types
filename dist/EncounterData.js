@@ -3,8 +3,8 @@ import { PlayerEffect } from "./PlayerEffect.js";
 import { Attribute } from "./PlayerStats.js";
 export function validate(data) {
     /*
-      Assume data is correctly typed then try and desturcture
-    */
+        Assume data is correctly typed then try and desturcture
+      */
     const eData = data;
     try {
         /*
@@ -21,14 +21,18 @@ export function validate(data) {
             if (typeof prop !== 'string')
                 return new Error(prop + ' is not a string');
         }
+        if (Object.keys(options).length <= 0)
+            return new Error('Please add at least one option!');
+        if (Object.keys(options).length > 4)
+            return new Error('That\'s too many options!');
         for (const option in options) {
-            const { threshold, stat, success, fail } = options[option];
+            const { threshold, stat, "Success": success, "Fail": fail } = options[option];
             if (typeof threshold !== 'number')
-                return new Error(threshold + ' is not a string');
+                return new Error(threshold + ' is not a number');
             if (!Object.values(Attribute).includes(stat))
                 return new Error(stat + ' is not a valid Attribute');
             for (const result of [success, fail]) {
-                const { type, title, text, effect, value } = result;
+                const { type, title, text, effect, potency } = result;
                 for (let prop in [title, text]) {
                     if (typeof prop !== 'string')
                         return new Error(prop + ' is not a string');
@@ -37,9 +41,8 @@ export function validate(data) {
                     return new Error(type + ' is not a valid EncounterResult');
                 if (!Object.values(PlayerEffect).includes(effect))
                     return new Error(effect + ' is not a valid PlayerEffect');
-                if (typeof value !== 'number')
-                    return new Error(value + ' is not a number');
-                return new Error();
+                if (typeof potency !== 'number')
+                    return new Error(potency + ' is not a number');
             }
             ;
         }

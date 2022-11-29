@@ -1,5 +1,5 @@
 export var EncounterResult;
 (function (EncounterResult) {
-    EncounterResult["SUCCESS"] = "success";
-    EncounterResult["FAIL"] = "fail";
+    EncounterResult["SUCCESS"] = "Success";
+    EncounterResult["FAIL"] = "Fail";
 })(EncounterResult || (EncounterResult = {}));

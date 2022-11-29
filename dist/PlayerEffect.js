@@ -1,7 +1,7 @@
 export var PlayerEffect;
 (function (PlayerEffect) {
-    PlayerEffect["DAMAGE"] = "damage";
-    PlayerEffect["HEAL"] = "heal";
-    PlayerEffect["NONE"] = "no effect";
-    PlayerEffect["CHARISMA"] = "charisma";
+    PlayerEffect["DAMAGE"] = "Damage";
+    PlayerEffect["HEAL"] = "Heal";
+    PlayerEffect["NONE"] = "No effect";
+    PlayerEffect["CHARISMA"] = "Charisma";
 })(PlayerEffect || (PlayerEffect = {}));

@@ -6,14 +6,14 @@ export declare type PlayerData = {
     health: number;
     score: number;
     stats: PlayerStats;
-    flags: Map<Flags, PlayerFlag>;
+    flags: Map<Flag, PlayerFlag>;
 };
 export declare type PlayerFlag = {
-    name: Flags;
+    name: Flag;
     duration: number;
     potency: number;
 };
-export declare enum Flags {
+export declare enum Flag {
     POISONED = "Poisoned",
     STRENGTH_BUFF = "Strength Buff",
     CHARISMA_BUFF = "Charisma Buff",

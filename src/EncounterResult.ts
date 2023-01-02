@@ -1,4 +1,4 @@
-import { PlayerEffect } from "./PlayerEffect";
+import { Effect, LingeringEffect } from "./PlayerEffect";
 
 export enum EncounterResult {
   SUCCESS = "Success",
@@ -9,6 +9,6 @@ export type EncounterOptionResult = {
   type: EncounterResult;
   title: string;
   text: string;
-  effect: PlayerEffect;
-  potency: number;
+  baseEffect: Effect;
+  additionalEffect: LingeringEffect;
 };

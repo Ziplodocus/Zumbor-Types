@@ -1,5 +1,5 @@
-import { LingeringEffect, LingeringEffectKey } from "./PlayerEffect";
-import { PlayerStats } from "./PlayerStats";
+import { LingeringEffect, LingeringEffectKey } from "./PlayerEffect.js";
+import { PlayerStats } from "./PlayerStats.js";
 
 export type PlayerData = {
   user: string;

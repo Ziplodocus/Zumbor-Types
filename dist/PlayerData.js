@@ -1,4 +1,4 @@
-import { LingeringEffectKey } from "./PlayerEffect";
+import { LingeringEffectKey } from "./PlayerEffect.js";
 export function validatePlayerData(wildData) {
     // Assume playerData and then catch the exception if it isn't.
     const data = wildData;

@@ -1,4 +1,4 @@
-import { Effect, LingeringEffect } from "./PlayerEffect";
+import { Effect, LingeringEffect } from "./PlayerEffect.js";
 
 export enum EncounterResult {
   SUCCESS = "Success",

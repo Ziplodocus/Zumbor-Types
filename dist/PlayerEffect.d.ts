@@ -7,7 +7,6 @@ export declare enum LingeringEffectKey {
     REGENERATE = "Regeneration"
 }
 export declare enum EffectKey {
-    NONE = "No effect",
     DAMAGE = "Damage",
     HEAL = "Heal",
     CHARISMA = "Charisma",

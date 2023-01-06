@@ -8,7 +8,6 @@ export enum LingeringEffectKey {
 }
 
 export enum EffectKey {
-  NONE = "No effect",
   DAMAGE = "Damage",
   HEAL = "Heal",
   CHARISMA = "Charisma",

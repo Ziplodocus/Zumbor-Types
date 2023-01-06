@@ -1,4 +1,4 @@
-import { Effect, LingeringEffect } from "./PlayerEffect";
+import { LingeringEffect, LingeringEffectKey } from "./PlayerEffect";
 import { PlayerStats } from "./PlayerStats";
 export declare type PlayerData = {
     user: string;
@@ -7,5 +7,5 @@ export declare type PlayerData = {
     health: number;
     score: number;
     stats: PlayerStats;
-    effects: Map<Effect, LingeringEffect[]>;
+    effects: Map<LingeringEffectKey, Set<LingeringEffect>>;
 };

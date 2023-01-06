@@ -9,6 +9,6 @@ export type EncounterOptionResult = {
   type: EncounterResult;
   title: string;
   text: string;
-  baseEffect: Effect;
-  additionalEffect: LingeringEffect;
+  baseEffect?: Effect;
+  additionalEffect?: LingeringEffect;
 };

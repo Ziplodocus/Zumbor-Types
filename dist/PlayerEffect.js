@@ -9,7 +9,6 @@ export var LingeringEffectKey;
 })(LingeringEffectKey || (LingeringEffectKey = {}));
 export var EffectKey;
 (function (EffectKey) {
-    EffectKey["NONE"] = "No effect";
     EffectKey["DAMAGE"] = "Damage";
     EffectKey["HEAL"] = "Heal";
     EffectKey["CHARISMA"] = "Charisma";

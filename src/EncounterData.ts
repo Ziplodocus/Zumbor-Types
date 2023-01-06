@@ -41,13 +41,18 @@ export function validate(data: Record<string, unknown>): EncounterData | Error {
         for (let prop in [title, text]) {
           if (typeof prop !== 'string') return new Error(prop + ' is not a string');
         }
-        if (!Object.values(EncounterResult).includes(type)) return new Error(type + ' is not a valid EncounterResult');
-        if (!Object.values(EffectKey).includes(baseEffect.name)) return new Error(baseEffect.name + ' is not a valid effect');
-        if (typeof baseEffect.potency !== 'number') return new Error(baseEffect.potency + ' is not a number');
 
-        if (!Object.values(LingeringEffectKey).includes(additionalEffect.name)) return new Error(additionalEffect.name + ' is not a valid effect');
-        if (typeof additionalEffect.potency !== 'number') return new Error(additionalEffect.potency + ' is not a number');
-        if (typeof additionalEffect.duration !== 'number') return new Error(additionalEffect.duration + ' is not a number');
+        if (baseEffect) {
+          if (!Object.values(EncounterResult).includes(type)) return new Error(type + ' is not a valid EncounterResult');
+          if (!Object.values(EffectKey).includes(baseEffect.name)) return new Error(baseEffect.name + ' is not a valid effect');
+          if (typeof baseEffect.potency !== 'number') return new Error(baseEffect.potency + ' is not a number');
+        }
+
+        if (additionalEffect) {
+          if (!Object.values(LingeringEffectKey).includes(additionalEffect.name)) return new Error(additionalEffect.name + ' is not a valid effect');
+          if (typeof additionalEffect.potency !== 'number') return new Error(additionalEffect.potency + ' is not a number');
+          if (typeof additionalEffect.duration !== 'number') return new Error(additionalEffect.duration + ' is not a number');
+        }
       };
     }
     return eData;

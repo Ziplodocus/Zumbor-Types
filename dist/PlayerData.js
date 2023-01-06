@@ -18,6 +18,7 @@ export function validatePlayerData(wildData) {
             // @ts-ignore Can happen is input data is not playerdata
             data.effects = emptyEffects;
         }
+        return data;
     }
     catch (e) {
         console.error(e);

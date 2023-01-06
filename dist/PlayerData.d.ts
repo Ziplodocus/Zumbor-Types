@@ -9,4 +9,4 @@ export declare type PlayerData = {
     stats: PlayerStats;
     effects: Record<LingeringEffectKey, LingeringEffect[]>;
 };
-export declare function validatePlayerData(wildData: any): Error | undefined;
+export declare function validatePlayerData(wildData: any): Error | PlayerData;

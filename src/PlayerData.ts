@@ -37,6 +37,7 @@ export function validatePlayerData(wildData: any) {
       // @ts-ignore Can happen is input data is not playerdata
       data.effects = emptyEffects as Record<LingeringEffectKey, LingeringEffect[]>;
     }
+    return data;
   } catch (e) {
     console.error(e);
     return new Error('Not valid player data')

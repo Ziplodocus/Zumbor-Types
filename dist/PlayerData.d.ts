@@ -7,5 +7,6 @@ export declare type PlayerData = {
     health: number;
     score: number;
     stats: PlayerStats;
-    effects: Map<LingeringEffectKey, Set<LingeringEffect>>;
+    effects: Record<LingeringEffectKey, LingeringEffect[]>;
 };
+export declare function validatePlayerData(wildData: any): Error | undefined;

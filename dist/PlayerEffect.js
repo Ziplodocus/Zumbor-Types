@@ -4,8 +4,8 @@ export var LingeringEffectKey;
     LingeringEffectKey["STRENGTH"] = "Strength";
     LingeringEffectKey["AGILITY"] = "Agility";
     LingeringEffectKey["WISDOM"] = "Wisdom";
-    LingeringEffectKey["POISON"] = "Poisoned";
-    LingeringEffectKey["REGENERATE"] = "Regeneration";
+    LingeringEffectKey["POISON"] = "Poison";
+    LingeringEffectKey["REGENERATE"] = "Regenerate";
 })(LingeringEffectKey || (LingeringEffectKey = {}));
 export var EffectKey;
 (function (EffectKey) {
